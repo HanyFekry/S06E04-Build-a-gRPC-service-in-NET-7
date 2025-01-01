@@ -1,0 +1,17 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "ToDoGrpc";
+
+//import "google/api/annotations.proto";
+
+package todoit;
+
+service Image{
+	rpc GetUrl(GetUrlRequest) returns(GetUrlResponse);
+}
+message GetUrlRequest{
+	string name=1;
+}
+message GetUrlResponse{
+	string url=1;
+}
